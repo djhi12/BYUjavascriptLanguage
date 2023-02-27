@@ -4,7 +4,6 @@
 
 // Step 1: declare and instantiate a variable to hold your name
 
-
 // Step 2: place the value of the name variable into the HTML file (hint: document.querySelector())
 
 
@@ -21,6 +20,10 @@
 
 // Step 7: place the value of the picture variable into the HTML file (hint: document.querySelector().setAttribute())
 
+const name = document.querySelector("#name").innerHTML = "Daniel John Idorot";
+const currentYear = document.querySelector("#year").innerHTML = new Date();
+const myImg = document.querySelector("#myImg");
+myImg.setAttribute("src", "../task/img/myPhoto.jpg");
 
 
 
@@ -51,6 +54,24 @@
 
 
 // Step 7: repeat Step 2
+
+
+const favFoodList1 = ["Adobo ",  "Lechon ", "Chopseuy ", "Tinola ", "Nilaga"];
+
+const favFoodList2 = ["Leche Flan ", "Buko Salad ", "Chocolate Cake ", "Macaroni Salad "];
+
+const favFoodList3 = favFoodList1.concat(favFoodList2);
+
+// comFoods.shift(); // First element
+// comFoods.pop(); // Last element
+
+
+const foodList = document.querySelector("#food").innerHTML = favFoodList3;
+
+console.log(foodList);
+
+
+
 
 
 
