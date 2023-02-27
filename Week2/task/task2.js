@@ -65,6 +65,8 @@ const favFoodList3 = favFoodList1.concat(favFoodList2);
 // comFoods.shift(); // First element
 // comFoods.pop(); // Last element
 
+favFoodList3.shift();
+favFoodList3.pop();
 
 const foodList = document.querySelector("#food").innerHTML = favFoodList3;
 
