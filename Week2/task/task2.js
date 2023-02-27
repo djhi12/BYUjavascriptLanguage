@@ -21,7 +21,7 @@
 // Step 7: place the value of the picture variable into the HTML file (hint: document.querySelector().setAttribute())
 
 const name = document.querySelector("#name").innerHTML = "Daniel John Idorot";
-const currentYear = document.querySelector("#year").innerHTML = new Date();
+const currentYear = document.querySelector("#year").innerHTML = new Date().getFullYear();
 const myImg = document.querySelector("#myImg");
 myImg.setAttribute("src", "../task/img/myPhoto.jpg");
 
