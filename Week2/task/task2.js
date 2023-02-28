@@ -22,8 +22,9 @@
 
 const name = document.querySelector("#name").innerHTML = "Daniel John Idorot";
 const currentYear = document.querySelector("#year").innerHTML = new Date().getFullYear();
-const myImg = document.querySelector("#myImg");
-myImg.setAttribute("src", "../task/img/myPhoto.jpg");
+const myImg = document.querySelector("img");
+myImg.setAttribute("src", "../task/images/myPhoto.jpg");
+myImg.setAttribute("alt", "My Photo");
 
 
 
