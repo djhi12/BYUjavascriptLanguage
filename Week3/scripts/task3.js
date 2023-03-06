@@ -47,3 +47,103 @@
 // Step 6: Use the map array method to multiple each element in the array variable by 2 and assign the result to the HTML element with an ID of "multiplied"
 
 // Step 7: Use the map and reduce array methods to sum the array elements after multiplying each element by two.  Assign the result to the HTML element with an ID of "sumOfMultiplied"
+
+
+// Addition
+function add(number1, number2) {
+    return Number(number1) + Number(number2);
+  }
+  
+  function addNumbers() {
+    const addEndOne = document.getElementById("addend1").value;
+    const addEndTwo = document.getElementById("addend2").value;
+  
+    const sum = add(addEndOne, addEndTwo);
+  
+    document.getElementById("sum").value = sum;
+  }
+  
+  document.getElementById("addNumbers").addEventListener("click", addNumbers);
+  
+  
+  // Subtraction
+  function subtract(number1, number2) {
+    return Number(number1) - Number(number2);
+  }
+  
+  function subtractNumbers() {
+    const subEndOne = document.getElementById("minuend").value;
+    const subEndTwo = document.getElementById("subtrahend").value;
+  
+    const subNum = subtract(subEndOne, subEndTwo);
+  
+    document.getElementById("difference").value = subNum;
+  }
+  
+  document.getElementById("subtractNumbers").addEventListener("click", subtractNumbers);
+  
+  
+  // Multiplication
+  const multiply = (number1, number2) => Number(number1) * Number(number2);
+  
+  function multiplyNumbers() {
+    const factorOne = document.getElementById("factor1").value;
+    const factorTwo = document.getElementById("factor2").value;
+  
+    const product = multiply(factorOne, factorTwo);
+  
+    document.getElementById("product").value = product;
+  }
+  
+  document.getElementById("multiplyNumbers").addEventListener("click", multiplyNumbers);
+  
+  
+  // Division
+  const divide = (number1, number2) => Number(number1) / Number(number2);
+  
+  function divideNumbers() {
+    const dividend = document.getElementById("dividend").value;
+    const divisor = document.getElementById("divisor").value;
+  
+    const quotient = divide(dividend, divisor);
+  
+    document.getElementById("quotient").value = quotient;
+  }
+  
+  document.getElementById("divideNumbers").addEventListener("click", divideNumbers);
+  
+  
+  // Array Methods
+  const sourceArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+  
+  const oddNumbers = sourceArray.filter(function (num) {
+    return num % 2 !== 0;
+  });
+  
+  const evenNumbers = sourceArray.filter(function (num) {
+    return num % 2 === 0;
+  });
+  
+  const sumOfArray = sourceArray.reduce(function (acc, num) {
+    return acc + num;
+  }, 0);
+  
+  const multipliedArray = sourceArray.map(function (num) {
+    return num * 2;
+  });
+  
+  const sumOfMultiplied = multipliedArray.reduce(function (acc, num) {
+    return acc + num;
+  }, 0);
+  
+  document.getElementById("array").innerHTML = sourceArray;
+  document.getElementById("odds").innerHTML = oddNumbers;
+  document.getElementById("evens").innerHTML = evenNumbers;
+  document.getElementById("sumOfArray").innerHTML = sumOfArray;
+  document.getElementById("multiplied").innerHTML = multipliedArray;
+  document.getElementById("sumOfMultiplied").innerHTML = sumOfMultiplied;
+  
+  
+  // Year in Footer
+  const year = new Date().getFullYear();
+  document.getElementById("year").innerHTML = year;
